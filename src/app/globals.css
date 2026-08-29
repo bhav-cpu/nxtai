@@ -70,6 +70,42 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Scroll-triggered fade animations */
+.scroll-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.scroll-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children animation */
+.stagger-children > .scroll-hidden:nth-child(1) { transition-delay: 0ms; }
+.stagger-children > .scroll-hidden:nth-child(2) { transition-delay: 120ms; }
+.stagger-children > .scroll-hidden:nth-child(3) { transition-delay: 240ms; }
+.stagger-children > .scroll-hidden:nth-child(4) { transition-delay: 360ms; }
+
+/* Hero entrance animation */
+.hero-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: hero-enter 0.8s ease-out forwards;
+}
+
+.hero-fade-in-delay-1 { animation-delay: 0.2s; }
+.hero-fade-in-delay-2 { animation-delay: 0.4s; }
+.hero-fade-in-delay-3 { animation-delay: 0.6s; }
+
+@keyframes hero-enter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

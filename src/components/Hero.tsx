@@ -73,27 +73,27 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
-        {/* Badge / Pill — with 3D float */}
-        <div className="float-3d inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-zinc-800 bg-zinc-900/80 backdrop-blur-sm text-xs sm:text-sm font-medium text-zinc-300 shadow-inner mb-8 hover:border-zinc-700 transition-colors">
+        {/* Badge / Pill — fade in first */}
+        <div className="hero-fade-in float-3d inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-zinc-800 bg-zinc-900/80 backdrop-blur-sm text-xs sm:text-sm font-medium text-zinc-300 shadow-inner mb-8 hover:border-zinc-700 transition-colors">
           <Bot className="w-4 h-4 text-blue-400" />
           <span>AI-Powered Business Automation</span>
         </div>
 
-        {/* Main Headline */}
-        <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-zinc-100 max-w-4xl">
+        {/* Main Headline — fade in with delay */}
+        <h1 className="hero-fade-in hero-fade-in-delay-1 text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-zinc-100 max-w-4xl">
           <span className="block">Automate Your Entire Business Pipeline</span>
           <span className="block mt-2 bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-500 bg-clip-text text-transparent">
             From Leads to Closing
           </span>
         </h1>
 
-        {/* Subheadline */}
-        <p className="mt-6 text-lg sm:text-xl md:text-2xl text-zinc-400 max-w-3xl font-normal leading-relaxed">
+        {/* Subheadline — fade in with more delay */}
+        <p className="hero-fade-in hero-fade-in-delay-2 mt-6 text-lg sm:text-xl md:text-2xl text-zinc-400 max-w-3xl font-normal leading-relaxed">
           We build multi-agent AI systems that handle lead generation, outreach, follow-ups, and closing — so you can focus on scaling.
         </p>
 
-        {/* CTA Section */}
-        <div className="mt-10 flex flex-col items-center gap-6">
+        {/* CTA Section — fade in last */}
+        <div className="hero-fade-in hero-fade-in-delay-3 mt-10 flex flex-col items-center gap-6">
           <a
             href="https://chat.whatsapp.com/Dd0DMHLlOANLVBAXtA5aji?s=cl&p=i&mlu=4"
             target="_blank"
